@@ -1,9 +1,3 @@
-
-let clicks =0;
-let item1 =0;
-let item2 =0;
-let item3 =0;
-
 // dictionary
 let clickUpgrades = {
     Upgrade1:  {
@@ -34,6 +28,11 @@ let clickUpgrades = {
   
 
   
+let clicks =0;
+let item1 =0;
+let item2 =0;
+let item3 =0;
+
   
   
   // clicker count function and upgrade funtions

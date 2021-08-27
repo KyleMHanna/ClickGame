@@ -8,3 +8,9 @@ background-size: cover;
     max-height: 60vh;
     max-width: 60vh;
 }
+
+.main-icon {
+    cursor: crosshair;
+  user-select: none;
+  transition: all .3s linear;
+}
