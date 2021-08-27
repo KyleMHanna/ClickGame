@@ -10,7 +10,7 @@
 
 <style>
  /* This is for wire framing to see our rows/columns */
- body.debug .container,
+ /* ///body.debug .container, */
         body.debug .container-fluid {
           outline: 2px double blue;
           outline-offset: -2px;
@@ -25,44 +25,43 @@
         }
 </style>
 <!-- Header -->
-<header class="debug">
+<header class="">
     
     <div class="container-md-12 !direction !spacing text-center">
         <h1 class="text-light">Moon Miner</h1>
     </div>
 </header>
 <!-- body -->
-<body class="StarBackround">
+<body class="  StarBackround">
 <!-- main -->
-<main class="debug">
-<div class="container-fluid text-center ">
-    <!-- Stats and inventory cards -->
+<main class="">
+<div class="container-fluid text-center py-4 ">
+    <!-- Stats and inventory cards/ counters -->
     <div class="row">
         <div class="col-md-4 py-5">
             <div class="card" style="">
-                <div class="card-header">
+                <div class="card">
                   <h1 class="bg-secondary">Stats</h1>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">CPM Cheese Per second </li>
-                  <li class="list-group-item">TCM Total choose multiplier </li>
+                  <li class="list-group-item">CPM  </li>
+                  <li class="list-group-item">TCM  </li>
                 </ul>
               </div>
         </div>
-        <div class="col-md-4" >
-            <button onclick="()"  id="moonImg"><img src="https://media.istockphoto.com/vectors/realistic-full-moon-vector-id584764738?k=20&m=584764738&s=612x612&w=0&h=pgxfLj3IhOr2LQmWAsUQSqqrUwjSaotCAMxeRHMs2Kg=" alt=""></button>
+        <div class="col-md-4 " >
+            <button onClick="onClick()"><img class="moonImg"src="https://media.istockphoto.com/vectors/realistic-full-moon-vector-id584764738?k=20&m=584764738&s=612x612&w=0&h=pgxfLj3IhOr2LQmWAsUQSqqrUwjSaotCAMxeRHMs2Kg=" alt=""></button>
         </div>
-        <div class="col-md-4 py-5">
-            <div class="card" style="">
-                <div class="card-header">
+        <div class="col-md-4 py-5 ">
+            <div class="card" >
+                <div class="card">
                   <h1 class="bg-secondary">Inventory</h1>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Cheese</li>
-                  <li class="list-group-item">CheeseKnife</li>
-                  <li class="list-group-item">moustronauts</li>
-                  <li class="list-group-item">Graters</li>
-                 
+                  <li class="list-group-item"> <p>currency: <a id="clicks">0</a></p></li>
+                  <li class="list-group-item"><p>item1: <a id="item1">0</a></p></li>
+                  <li class="list-group-item"><p>item2: <a id="item2">0</a></p></li>
+                  <li class="list-group-item"><p>item3: <a id="item3">0</a></p></li>
                 </ul>
               </div>
         </div>
@@ -74,13 +73,13 @@
     <div class="row">
         <div class="col-md-6">
             <h1 class="card bg-secondary"> Auto upgrade </h1>
-            <button onclick="()" class="btn border shadow bg-dark text-white">Click 2x</button>
-            <button onclick="()" class="btn border shadow bg-dark text-white">Click 5x</button>
+            <button onclick="('auto1')" class="btn border shadow bg-dark text-white">Click 2x</button>
+            <button onclick="('auto2')" class="btn border shadow bg-dark text-white">Click 5x</button>
         </div>
         <div class="col-md-6">
             <h1 class="card bg-secondary"> Click to upgrade </h1>
-            <button onclick="()" class="btn border shadow bg-dark text-white">CheeseKnife </button>
-            <button onclick="()" class="btn border shadow bg-dark text-white">PickAxe </button>
+            <button onclick="(addItem1())" class="btn border shadow bg-dark text-white">CheeseKnife </button>
+            <button onclick="(addItem2())" class="btn border shadow bg-dark text-white">PickAxe </button>
             
         </div>
     </div>

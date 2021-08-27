@@ -1,9 +1,10 @@
-#moonImg {
-   
-}
-
-
-
 .StarBackround {
 background-image: url(https://cdn.wallpapersafari.com/37/54/M4phV9.jpg);
+background-size: cover;
+
+}
+
+.moonImg{
+    max-height: 60vh;
+    max-width: 60vh;
 }

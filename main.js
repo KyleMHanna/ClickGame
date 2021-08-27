@@ -1,25 +1,18 @@
-let clickUpgrades = {
-    pickaxes: {
-      price: 200,
-      quantity: 0,
-      multiplier: 1
-    },
-    cheeseknife: {
-        price: 100,
-        quantity: 0,
-        multiplier: 1
-      }
-  };
-  
-  let automaticUpgrades = {
-    helper1: {
-      price: 600,
-      quantity: 0,
-      multiplier: 2
-    },
-    helper2: {
-        price: 600,
-        quantity: 0,
-        multiplier: 5
-  };
 
+let currency =0;
+var item1 = 0;
+var item2 = 0;
+let item3 =0;
+
+var clicks =0;
+
+// clicker count function
+function onClick(){
+clicks += 1;
+document.getElementById('clicks').innerHTML = clicks;
+};
+
+//function addItem1()[
+ //   item1 += 1;
+///   document.getElementById("addItem1").innerHTML = item1;
+//]//;
