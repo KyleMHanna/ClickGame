@@ -9,12 +9,12 @@ let clickUpgrades = {
     Upgrade1:  {
       price: 5,
       quantity: 0,
-      multiplier: 1
+      multiplier: 2
     },
     Upgrade2: {
         price: 10,
         quantity: 0,
-        multiplier: 1
+        multiplier: 3
       }
   };
   
@@ -22,7 +22,7 @@ let clickUpgrades = {
     passive1: {
       price: 20,
       quantity: 0,
-      multiplier: 2
+      multiplier: 4
     },
     passive2: {
         price: 25,
