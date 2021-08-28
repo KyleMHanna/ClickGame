@@ -81,7 +81,7 @@ let multiplier3 = 0
 //   }
 function autoClicks(){
 if(autoClick < 1) {
-    clicks += 1 * Math.round(clickX2);
+    clicks += 1 * Math.round(clickX);
 }
 document.getElementById('clickCount').innerText = clicks.toString();
 }

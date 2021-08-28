@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout template</title>
+  <title>Halo click game</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/styles/style.css">
 </head>
@@ -39,11 +39,11 @@
     <!-- Stats and inventory cards/ counters -->
     <div class="row">
         <div class="col-md-4 py-5">
-                <div class="card ">
-                    <h1 class="bg-secondary">Passives Bought</h1>
+                <div class=" ">
+                    <h1 class="text-light">Passives Bought</h1>
                     
-                    <li class="list-group-item"><p class="bg-danger">Healthpack: <p><span id = "pass2"></span></li></p>
-                    <li class="list-group-item"><p class="bg-primary">Regen: <p><span id = "pass1"></span></li> </p>
+                    <p class="bg-danger text-light">Healthpack: </p><span class="text-light"id = "pass2"></span> </p>
+                    <p class="bg-primary text-light">Regen: <p><span class="text-light" id = "pass1"></span> </p>
               </div>
         </div>
         <div class="col-md-4" >
@@ -52,23 +52,25 @@
             <h2 class="text-light pt-4">Click on Master Chief to Start</h2>
 
 
-            <li class="list-group-item bg-secondary text-light "> <p class="bg-success"> Cash money</p><a class="text-light" id="clickCount">$ 0</a>$</li>
+            <li class=" text-light "> <p class="bg-success"> Cash money</p>
+            <span class="text-danger">$</span>
+              <h3 class="text-danger" id="clickCount"> 0</h3>$</li> </li>
 
 
         </div>
     </div>
         <div class="col-md-4 py-5 ">
-            <div class="card " >
-                <div class="card">
-                  <h1 class="bg-secondary">Inventory</h1>
-                </div>
-                <ul class="list-group list-group-flush">
+               
+                  <h1 class="text-light">Inventory</h1>
                 
-                  <li class="list-group-item"><p class="bg-secondary">BattleRifle: </p>Power Level</li>
-                  <span id = "multi"></span>
+                
+                  <p class="bg-secondary text-light">BattleRifle </p> 
+                  <span class="text-light">Power Level</span>
+                  <span class="text-light" id ="multi"> </span>
 
-                  <li class="list-group-item"><p class="bg-secondary">Sword</p> Power level</li>
-                  <span id = "multi1"></span>
+                  <p class="text-light"><p class="text-light bg-secondary">Sword</p> 
+                  <span class="text-light">Power Level</span>
+                  <span class="text-light" id ="multi1"></span>
                 </ul>
               </div>
         </div>
@@ -76,8 +78,8 @@
 </container-fluid>
 
 <div class="container fluid-md-12">
-  <p class = text-light><span class id = "clickpass2">0</span> X Multi for weapons</p>
-  <p class = text-light ><span class id = "clickpass1">0</span> X  Multi for passives</p>
+  <p class = text-danger><span class id = "clickpass2">0</span> X Multi for weapons</p>
+  <p class = text-danger ><span class id = "clickpass1">0</span> X  Multi for passives</p>
 
 </div>
 <!-- upgrades and store -->
