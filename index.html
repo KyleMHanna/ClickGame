@@ -27,8 +27,8 @@
 <!-- Header -->
 <header class="">
     
-    <div class="container-md-12 !direction !spacing text-center">
-        <h1 class="text-light">Moon Miner</h1>
+    <div class="container-md-12 !direction !spacing text-center pt-3">
+        <h1 class="text-light ">Noob Miner</h1>
     </div>
 </header>
 <!-- body -->
@@ -39,7 +39,7 @@
     <!-- Stats and inventory cards/ counters -->
     <div class="row">
         <div class="col-md-4 py-5">
-                <div class="card">
+                <div class="card b">
                     <h1 class="bg-secondary">Passives Bought</h1>
                     
                     <li class="list-group-item"><p class="bg-danger">Healthpack: <p><span id = "pass2"></span></li></p>
@@ -48,17 +48,20 @@
         </div>
         <div class="col-md-4" >
             <div class=" main-icon" >
-            <button class="" onClick="onClick()"><img class="moonImg main-icon  "src="https://c.tenor.com/CT3GOSeG8xcAAAAC/doge-doge-coin.gif" alt=""></button>
+            <button class="" onClick="onClick()"><img class="moonImg main-icon  "src="https://media4.giphy.com/media/iFU7R8rH4CiUUcHzk9/giphy.gif?cid=ecf05e47r1q9az449ld4rfpxyrow76w4kxf6b0tn0hb01eih&rid=giphy.gif&ct=g" alt=""></button>
+            <h2 class="text-light pt-4">Click on Master Chief to Start</h2>
+
+
         </div>
     </div>
         <div class="col-md-4 py-5 ">
-            <div class="card" >
+            <div class="card bg-primary" >
                 <div class="card">
                   <h1 class="bg-secondary">Inventory</h1>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item"> <p class="bg-success"> Cash money</p><a id="clickCount">0</a></li>
-                  <li class="list-group-item"><p class="bg-secondary">Handgun: </p>Power Level</li>
+                  <li class="list-group-item"><p class="bg-secondary">BattleRifle: </p>Power Level</li>
                   <span id = "multi"></span>
 
                   <li class="list-group-item"><p class="bg-primary">Sword</p> Power level</li>
@@ -86,11 +89,13 @@
           </div>
           <div class="col-md-6">
             <h1 class="card bg-secondary"> Upgrades </h1>
-            <button onclick="passive1()" class="btn border shadow  text-white bg-danger">Gun</button>
+            <button onclick="passive1()" class="btn border shadow  text-white bg-danger">BattleRifle
+              <img class="energysword" src="https://pbs.twimg.com/media/DzNFf9DU0AMvqvB.jpg" alt=""></button>
               <p class = text-light><span class id = "clickItem1">$0</span> Upgrade Price</p>
               
-              <button onclick="addItem2()" class="btn border shadow bg-dark text-white bg-primary">sword </button>
-              <p class = text-light><span class id = "clickItem2">$0</span> Upgrade Price</p>
+              <button onclick="addItem2()" class="btn border shadow bg-dark text-white bg-primary"> Energy sword 
+              <p> <img class="energysword" src= "https://static.turbosquid.com/Preview/001301/062/W1/_Z.jpg" alt=""></p>     </button>
+           <p class = text-light><span class id = "clickItem2">$0</span> Upgrade Price</p>
         </div>
     </div>
 </div>

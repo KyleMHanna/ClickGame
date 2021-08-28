@@ -5,12 +5,17 @@ background-size: cover;
 }
 
 .moonImg{
-    max-height: 60vh;
-    max-width: 60vh;
+    max-height: 80vh;
+    max-width: 80vh;
 }
 
 .main-icon {
     cursor: crosshair;
   user-select: none;
   transition: all .3s linear;
+}
+
+.energysword {
+  max-height: 10vh;
+  max-width: 20vh;
 }
