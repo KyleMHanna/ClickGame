@@ -114,9 +114,9 @@ function onClick(){
     //         // imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
           
         function addItem1(){
-            if(clicks >= 10) {
+            if(clicks >= 50) {
                 item1 += 1;
-                clicks -=10;
+                clicks -=50;
                 total += 1;
                 price += 5;
                 multiplier +=2;
@@ -150,9 +150,9 @@ function onClick(){
     
     
     function addItem2(){
-        if(clicks >= 10) {
+        if(clicks >= 30) {
             item2 += 1;
-            clicks -=10;
+            clicks -=30;
             total1 += 1;
             price1+= 10
             multiplier1 +=1;
@@ -172,9 +172,9 @@ function onClick(){
     }
 }
     function passive1(){
-        if (clicks >= 2) {
+        if (clicks >= 60) {
         item3 += 1;
-        clicks -=2;
+        clicks -=60;
         total2 += 1;
         multiplier2 += .5;
         price2 += 15
@@ -196,9 +196,9 @@ function onClick(){
     }
 }
     function passive2(){
-        if (clicks >= 5) {
+        if (clicks >= 35) {
         item4 += 1;
-        clicks -=5;
+        clicks -=35;
         total3 += 1;
         multiplier3 += 1.25;
         price3 += 20
