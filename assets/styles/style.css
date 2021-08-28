@@ -16,6 +16,10 @@ background-size: cover;
 }
 
 .energysword {
-  max-height: 10vh;
+  max-height: 20vh;
   max-width: 20vh;
+}
+.BattleRifle {
+  max-height: 22vh;
+  max-width: 22vh;
 }
