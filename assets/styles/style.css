@@ -16,10 +16,16 @@ background-size: cover;
 }
 
 .energysword {
+  cursor: crosshair;
   max-height: 20vh;
   max-width: 20vh;
+  user-select: none;
+  transition: all .3s linear;
 }
 .BattleRifle {
+  cursor: crosshair;
   max-height: 22vh;
   max-width: 22vh;
+  user-select: none;
+  transition: all .3s linear;
 }
