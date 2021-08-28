@@ -118,7 +118,7 @@ function onClick(){
                 item1 += 1;
                 clicks -=50;
                 total += 1;
-                price += 5;
+                price += 50;
                 multiplier +=2;
                 upgrade += multiplier * total}
                 else if (item1 >= 10)
@@ -154,7 +154,7 @@ function onClick(){
             item2 += 1;
             clicks -=30;
             total1 += 1;
-            price1+= 10
+            price1+= 30
             multiplier1 +=1;
             upgrade1 += multiplier1 * total1}
             else     Swal.fire({
@@ -177,7 +177,7 @@ function onClick(){
         clicks -=60;
         total2 += 1;
         multiplier2 += .5;
-        price2 += 15
+        price2 += 60
         passive01 += multiplier2 * total2  
     }
         else     Swal.fire({
@@ -201,7 +201,7 @@ function onClick(){
         clicks -=35;
         total3 += 1;
         multiplier3 += 1.25;
-        price3 += 20
+        price3 += 35
         passive02 += multiplier3 * total3  }
         else     Swal.fire({
             toast: true,
