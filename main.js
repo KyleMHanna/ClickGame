@@ -20,24 +20,24 @@ let itemnum = 0
 
 // clickUpgrades 
 let newItem = 0
-let price = 20
+let price = 5
 let total = 0
 let multiplier = 0
 let upgrade = 0
 
 let newItem1 = 0
-let price1 = 50
+let price1 = 10
 let total1 = 0
 let multiplier1 = 0
 let upgrade1 = 0
 
 let passive01 = 0
-let total2 = 20
-let price2 = 20
+let total2 = 0
+let price2 = 15
 let multiplier2 = 0
 
 let passive02 = 0
-let total3 = 20
+let total3 = 0
 let price3 = 20
 let multiplier3 = 0
 
@@ -108,8 +108,18 @@ function onClick(){
                 item1 += 1;
                 clicks -=5;
                 total += 1;
+                price += 5;
                 multiplier +=2;
-                upgrade += multiplier * total
+                upgrade += multiplier * total}
+                else     Swal.fire({
+                    toast: true,
+                    text: 'You broke!',
+                    position: 'center',
+                    timer: 4000,
+                    timerProgressBar: true,
+                    imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+                  });{   
+        
                 document.getElementById('multi').innerText = item1.toString()
                 document.getElementById('clickItem1').innerText = upgrade.toString()
                 console.log(clicks)
@@ -118,27 +128,46 @@ function onClick(){
         }
     
     function addItem2(){
-        if(clicks >= 5) {
+        if(clicks >= 10) {
             item2 += 1;
-            clicks -=5;
+            clicks -=10;
             total1 += 1;
-            multiplier1 +=2;
-            upgrade1 += multiplier1 * total1
+            price1+= 10
+            multiplier1 +=1;
+            upgrade1 += multiplier1 * total1}
+            else     Swal.fire({
+                toast: true,
+                text: 'You broke!',
+                position: 'center',
+                timer: 4000,
+                timerProgressBar: true,
+                imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+              });{   
+    
             document.getElementById('multi1').innerText = item2.toString()
             document.getElementById('clickItem2').innerHTML = upgrade1;
             update()
     }
 }
     function passive1(){
-        if (clicks >= 20) {
+        if (clicks >= 15) {
         item3 += 1;
-        clicks -=20;
+        clicks -=15;
         total2 += 1;
-        multiplier2 += 1.5;
-        price2 += 10
-        passive01 += multiplier2 * total2  
+        multiplier2 += .5;
+        price2 += 15
+        passive01 += multiplier2 * total2  }
+        else     Swal.fire({
+            toast: true,
+            text: 'You broke!',
+            position: 'center',
+            timer: 4000,
+            timerProgressBar: true,
+            imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+          });{   
+
         document.getElementById("pass1").innerHTML = item3.toString();
-        document.getElementById('clickpass1').innerHTML = passive01; 
+        document.getElementById('clickpass1').innerHTML = passive01.toString()
         document.getElementById('passTotal').innerHTML = price2.toString()
         update()
     }
@@ -148,31 +177,41 @@ function onClick(){
         item4 += 1;
         clicks -=20;
         total3 += 1;
-        multiplier3 += 1.75;
-        price3 += 30
-        passive02 += multiplier3 * total3    
-        document.getElementById("pass2").innerHTML = item4;
-        document.getElementById('clickpass2').innerHTML = passive02;
-        document.getElementById('passtotal1').innerHTML = price3;  
-        
+        multiplier3 += .5;
+        price3 += 20
+        passive02 += multiplier3 * total3  }
+        else     Swal.fire({
+            toast: true,
+            text: 'You broke!',
+            position: 'center',
+            timer: 4000,
+            timerProgressBar: true,
+            imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+          });{   
+  
+        document.getElementById("pass2").innerHTML = item4.toString()
+        document.getElementById('clickpass2').innerHTML = passive02.toString()
+        document.getElementById('passTotal1').innerText = price3.toString()
+      
     }
 }
-    update()
+update()
+function autoInterval(collectionInterval){
+    collectionInterval = setInterval(collectAutoUpgrades, 6000)
+  }
+  
     function collectAutoUpgrades(){
      let multitot = 0
      let passtot = 0
      multitot += multiplier2 + multiplier3
     passtot += passive01  + passive02
     clicks += multitot * passtot
-      
+ 
+    
     console.log(clicks)
     document.getElementById('clickCount').innerText = clicks.toString()
-      }
+    }
 
-    function autoInterval(collectionInterval){
-        collectionInterval = setInterval(collectAutoUpgrades, 3000);
-      }
-      autoInterval()
 
       
      
@@ -182,9 +221,14 @@ function onClick(){
 
  function update(){
  document.getElementById("clickCount").innerText = clicks.toString()
+ document.getElementById('multi').innerText = item1.toString()
+ document.getElementById('multi1').innerText = item2.toString()
+ document.getElementById("pass1").innerHTML = item3.toString()
+ document.getElementById("pass2").innerHTML = item4.toString()
  }
+
  autoInterval()
-     update()
+ update()
 
      
   
