@@ -4,6 +4,10 @@ let item2 = 0
 let item3 = 0
 let item4 = 0
 let itemnum = 0
+let autoClick = 0
+
+let clickX = 0;
+let clickX2 =1;
 // dictionary
 // let clickUpgrades = {
 //     Upgrade1:  {
@@ -75,6 +79,12 @@ let multiplier3 = 0
 //    console.log(clicks)
 // }
 //   }
+function autoClicks(){
+if(autoClick < 1) {
+    clicks += 1 * Math.round(clickX2);
+}
+document.getElementById('clickCount').innerText = clicks.toString();
+}
 function onClick(){
     clicks += 1
     clicks += total * multiplier
@@ -104,9 +114,9 @@ function onClick(){
     //         // imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
           
         function addItem1(){
-            if(clicks >= 5) {
+            if(clicks >= 10) {
                 item1 += 1;
-                clicks -=5;
+                clicks -=10;
                 total += 1;
                 price += 5;
                 multiplier +=2;
@@ -117,7 +127,7 @@ function onClick(){
                     position: 'center',
                     timer: 4000,
                     timerProgressBar: true,
-                    imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+                    imageUrl: 'https://www.thewrap.com/wp-content/uploads/2016/09/1200.jpg'
                   });{   
         
                 document.getElementById('multi').innerText = item1.toString()
@@ -141,43 +151,44 @@ function onClick(){
                 position: 'center',
                 timer: 4000,
                 timerProgressBar: true,
-                imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+                imageUrl: 'https://www.thewrap.com/wp-content/uploads/2016/09/1200.jpg'
               });{   
     
             document.getElementById('multi1').innerText = item2.toString()
-            document.getElementById('clickItem2').innerHTML = upgrade1;
+            document.getElementById('clickItem2').innerHTML = upgrade1.toString()
             update()
     }
 }
     function passive1(){
-        if (clicks >= 15) {
+        if (clicks >= 2) {
         item3 += 1;
-        clicks -=15;
+        clicks -=2;
         total2 += 1;
         multiplier2 += .5;
         price2 += 15
-        passive01 += multiplier2 * total2  }
+        passive01 += multiplier2 * total2  
+    }
         else     Swal.fire({
             toast: true,
             text: 'You broke!',
             position: 'center',
             timer: 4000,
             timerProgressBar: true,
-            imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+            imageUrl: 'https://www.thewrap.com/wp-content/uploads/2016/09/1200.jpg'
           });{   
 
-        document.getElementById("pass1").innerHTML = item3.toString();
+        document.getElementById("pass1").innerHTML = item3.toString()
         document.getElementById('clickpass1').innerHTML = passive01.toString()
         document.getElementById('passTotal').innerHTML = price2.toString()
         update()
     }
 }
     function passive2(){
-        if (clicks >= 20) {
+        if (clicks >= 5) {
         item4 += 1;
-        clicks -=20;
+        clicks -=5;
         total3 += 1;
-        multiplier3 += .5;
+        multiplier3 += 1.25;
         price3 += 20
         passive02 += multiplier3 * total3  }
         else     Swal.fire({
@@ -186,7 +197,7 @@ function onClick(){
             position: 'center',
             timer: 4000,
             timerProgressBar: true,
-            imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
+            imageUrl: 'https://www.thewrap.com/wp-content/uploads/2016/09/1200.jpg'
           });{   
   
         document.getElementById("pass2").innerHTML = item4.toString()
@@ -197,7 +208,7 @@ function onClick(){
 }
 update()
 function autoInterval(collectionInterval){
-    collectionInterval = setInterval(collectAutoUpgrades, 6000)
+    collectionInterval = setInterval(collectAutoUpgrades, 3000)
   }
   
     function collectAutoUpgrades(){
@@ -210,11 +221,14 @@ function autoInterval(collectionInterval){
     
     console.log(clicks)
     document.getElementById('clickCount').innerText = clicks.toString()
+    update()
     }
 
 
       
-     
+    function startInterval() {
+        collectionInterval = setInterval(autoClicks, 6000);
+      }
 
 
 
@@ -228,6 +242,7 @@ function autoInterval(collectionInterval){
  }
 
  autoInterval()
+ startInterval()
  update()
 
      
