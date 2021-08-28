@@ -141,6 +141,7 @@ function onClick(){
             
                   document.getElementById('multi').innerText = item1.toString()
                   document.getElementById('clickItem1').innerText = upgrade.toString()
+                  document.getElementById('clickItem1').innerHTML = price.toString()
                   console.log(clicks)
                   update()
 
@@ -168,6 +169,7 @@ function onClick(){
     
             document.getElementById('multi1').innerText = item2.toString()
             document.getElementById('clickItem2').innerHTML = upgrade1.toString()
+            document.getElementById('clickItem2').innerHTML = price1.toString()
             update()
     }
 }
@@ -251,6 +253,7 @@ function autoInterval(collectionInterval){
  document.getElementById('multi1').innerText = item2.toString()
  document.getElementById("pass1").innerHTML = item3.toString()
  document.getElementById("pass2").innerHTML = item4.toString()
+ 
  }
 
  autoInterval()
