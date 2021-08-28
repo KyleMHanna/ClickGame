@@ -1,12 +1,12 @@
 .StarBackround {
-background-image: url(https://i.pinimg.com/originals/0f/88/3e/0f883e6f5db348671c1e26a7dfd2e5f3.gif);
+background-image: url(https://i.pinimg.com/originals/bb/ae/91/bbae919ec6b9852d23145cf855ca4f05.jpg);
 background-size: cover;
 
 }
 
 .moonImg{
-    max-height: 80vh;
-    max-width: 80vh;
+    max-height: 65vh;
+    max-width: 65vh;
 }
 
 .main-icon {
@@ -29,3 +29,4 @@ background-size: cover;
   user-select: none;
   transition: all .3s linear;
 }
+
