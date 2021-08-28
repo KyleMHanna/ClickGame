@@ -41,14 +41,14 @@
         <div class="col-md-4 py-5">
                 <div class="card">
                     <h1 class="bg-secondary">Passives Bought</h1>
-                    <li class="list-group-item"><p>Regen: <p><span id = "pass1"></span></li> </p>
                     
-                    <li class="list-group-item"><p>Healthpack: <p><span id = "pass2"></span></li></p>
+                    <li class="list-group-item"><p class="bg-danger">Healthpack: <p><span id = "pass2"></span></li></p>
+                    <li class="list-group-item"><p class="bg-primary">Regen: <p><span id = "pass1"></span></li> </p>
               </div>
         </div>
         <div class="col-md-4" >
             <div class=" main-icon" >
-            <button class="" onClick="onClick()"><img class="moonImg main-icon  "src="https://media.istockphoto.com/vectors/realistic-full-moon-vector-id584764738?k=20&m=584764738&s=612x612&w=0&h=pgxfLj3IhOr2LQmWAsUQSqqrUwjSaotCAMxeRHMs2Kg=" alt=""></button>
+            <button class="" onClick="onClick()"><img class="moonImg main-icon  "src="https://c.tenor.com/CT3GOSeG8xcAAAAC/doge-doge-coin.gif" alt=""></button>
         </div>
     </div>
         <div class="col-md-4 py-5 ">
@@ -57,11 +57,11 @@
                   <h1 class="bg-secondary">Inventory</h1>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item"> <p> <a id="clickCount">0</a></p></li>
+                  <li class="list-group-item"> <p class="bg-success"> Cash money</p><a id="clickCount">0</a></li>
                   <li class="list-group-item"><p class="bg-secondary">Handgun: </p>Power Level</li>
                   <span id = "multi"></span>
 
-                  <li class="list-group-item"><p class="bg-secondary">Sword</p> Power level</li>
+                  <li class="list-group-item"><p class="bg-primary">Sword</p> Power level</li>
                   <span id = "multi1"></span>
                 </ul>
               </div>
@@ -70,8 +70,8 @@
 </container-fluid>
 
 <div class="container fluid-md-12">
-  <p class = text-light><span class id = "clickpass2">0</span> X</p>
-  <p class = text-light ><span class id = "clickpass1">0</span> X</p>
+  <p class = text-light><span class id = "clickpass2">0</span> X Multi for weapons</p>
+  <p class = text-light ><span class id = "clickpass1">0</span> X  Multi for passives</p>
 
 </div>
 <!-- upgrades and store -->
@@ -79,19 +79,18 @@
     <div class="row">
         <div class="col-md-6">
             <h1 class="card bg-secondary"> Passives </h1>
-            <button onclick="passive1()" class="btn border shadow bg-dark text-white">Regen</button>
+            <button onclick="addItem1()" class="btn border shadow bg-dark text-white">Regen </button>
             <p class = text-light>Wanna keep leveling up? $<span class id = "passTotal"> 20</span></p>
-            <button onclick="passive2()" class="btn border shadow bg-dark text-white">Healthpack</button>
+            <button onclick="passive2()" class="btn border shadow bg-danger text-white">Healthpack</button>
             <p class = text-light>Would you pay to win? $<span class id = "passTotal1">  20</span> </p>
           </div>
-            <div class="col-md-6">
-              <h1 class="card bg-secondary"> Upgrades </h1>
-              <button onclick="addItem1()" class="btn border shadow bg-dark text-white">gun </button>
+          <div class="col-md-6">
+            <h1 class="card bg-secondary"> Upgrades </h1>
+            <button onclick="passive1()" class="btn border shadow  text-white bg-danger">Gun</button>
               <p class = text-light><span class id = "clickItem1">$0</span> Upgrade Price</p>
-              <div></div>
-              <button onclick="addItem2()" class="btn border shadow bg-dark text-white">sword </button>
+              
+              <button onclick="addItem2()" class="btn border shadow bg-dark text-white bg-primary">sword </button>
               <p class = text-light><span class id = "clickItem2">$0</span> Upgrade Price</p>
-            </div>
         </div>
     </div>
 </div>

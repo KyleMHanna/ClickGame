@@ -121,21 +121,33 @@ function onClick(){
                 price += 5;
                 multiplier +=2;
                 upgrade += multiplier * total}
-                else     Swal.fire({
+                else if (item1 >= 10)
+                Swal.fire({
+                  toast: true,
+                  text: 'You broke!',
+                  position: 'center',
+                  timer: 4000,
+                  timerProgressBar: true,
+                  imageUrl: 'https://lh3.googleusercontent.com/proxy/Hpj1tO5kRZkbDgJ02BXMXb0wnT0ALTgJbcppRIHLQkwFu5TpitHmfWBfzyaroYK19Qo1hsTgSPNiGWGrpbIf6Bgajde7Y__C1G2RNysHowG1MQdGWdBQBjCAm1HG8Vr6jJp9rJeMg8YAo-FHGsgmIXPHdqLMsfMFbkc'
+                });
+                else   Swal.fire({
                     toast: true,
                     text: 'You broke!',
                     position: 'center',
                     timer: 4000,
                     timerProgressBar: true,
                     imageUrl: 'https://www.thewrap.com/wp-content/uploads/2016/09/1200.jpg'
-                  });{   
+                  });
+            
+                  document.getElementById('multi').innerText = item1.toString()
+                  document.getElementById('clickItem1').innerText = upgrade.toString()
+                  console.log(clicks)
+                  update()
+
+                    }
         
-                document.getElementById('multi').innerText = item1.toString()
-                document.getElementById('clickItem1').innerText = upgrade.toString()
-                console.log(clicks)
-                update()
-            }
-        }
+            
+    
     
     function addItem2(){
         if(clicks >= 10) {
