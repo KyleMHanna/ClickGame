@@ -24,25 +24,25 @@ let clickX2 =1;
 
 // clickUpgrades 
 let newItem = 0
-let price = 5
+let price = 50
 let total = 0
 let multiplier = 0
 let upgrade = 0
 
 let newItem1 = 0
-let price1 = 10
+let price1 = 30
 let total1 = 0
 let multiplier1 = 0
 let upgrade1 = 0
 
 let passive01 = 0
 let total2 = 0
-let price2 = 15
+let price2 = 60
 let multiplier2 = 0
 
 let passive02 = 0
 let total3 = 0
-let price3 = 20
+let price3 = 35
 let multiplier3 = 0
 
 
