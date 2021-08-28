@@ -167,9 +167,9 @@ function onClick(){
                 imageUrl: 'https://www.thewrap.com/wp-content/uploads/2016/09/1200.jpg'
               });{   
     
-            document.getElementById('multi1').innerText = item2.toString()
-            document.getElementById('clickItem2').innerHTML = upgrade1.toString()
-            document.getElementById('clickItem2').innerHTML = price1.toString()
+                document.getElementById('multi1').innerText = item2.toString()
+                document.getElementById('clickpass2').innerHTML = upgrade1.toString()
+                document.getElementById('clickItem2').innerHTML = price1.toString()
             update()
     }
 }
@@ -215,7 +215,7 @@ function onClick(){
           });{   
   
         document.getElementById("pass2").innerHTML = item4.toString()
-        document.getElementById('clickpass2').innerHTML = passive02.toString()
+        document.getElementById('clickpass1').innerHTML = passive02.toString()
         document.getElementById('passTotal1').innerText = price3.toString()
       
     }
