@@ -14,7 +14,39 @@ const rewire = require("rewire")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const main = rewire("./main")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -46,6 +78,22 @@ const passive2 = main.__get__("passive2")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const addItem1 = main.__get__("addItem1")
 
 
@@ -54,6 +102,15 @@ const addItem1 = main.__get__("addItem1")
 
 
 
+
+
+
+
+
+
+
+
+const onClick = main.__get__("onClick")
 // @ponicode
 describe("passive2", () => {
     test("0", () => {
@@ -64,6 +121,22 @@ describe("passive2", () => {
         expect(callFunction).not.toThrow()
     })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -91,5 +164,16 @@ describe("addItem1", () => {
 
     test("2", () => {
         addItem1()
+    })
+})
+
+// @ponicode
+describe("onClick", () => {
+    test("0", () => {
+        let callFunction = () => {
+            onClick()
+        }
+    
+        expect(callFunction).not.toThrow()
     })
 })

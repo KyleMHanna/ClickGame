@@ -119,7 +119,7 @@ function onClick(){
                   timer: 4000,
                   timerProgressBar: true,
                   imageUrl: 'https://lh3.googleusercontent.com/proxy/Hpj1tO5kRZkbDgJ02BXMXb0wnT0ALTgJbcppRIHLQkwFu5TpitHmfWBfzyaroYK19Qo1hsTgSPNiGWGrpbIf6Bgajde7Y__C1G2RNysHowG1MQdGWdBQBjCAm1HG8Vr6jJp9rJeMg8YAo-FHGsgmIXPHdqLMsfMFbkc'
-                });
+                })
                 else   Swal.fire({
                     toast: true,
                     text: 'Not enough click faster!',
@@ -130,7 +130,7 @@ function onClick(){
                   });
             
                   document.getElementById('multi').innerText = item1.toString()
-                  document.getElementById('clickItem1').innerText = upgrade.toString()
+                  document.getElementById('clickpass1').innerText = upgrade.toString()
                   document.getElementById('clickItem1').innerHTML = price.toString()
                   console.log(clicks)
                   update()
@@ -168,7 +168,7 @@ function onClick(){
         item3 += 1;
         clicks -=60;
         total2 += 1;
-        multiplier2 += .5;
+        multiplier2 += 1.5;
         price2 += 60
         passive01 += multiplier2 * total2  
     }
@@ -205,14 +205,14 @@ function onClick(){
           });{   
   
         document.getElementById("pass2").innerHTML = item4.toString()
-        document.getElementById('clickpass1').innerHTML = passive02.toString()
+        document.getElementById('clickpass2').innerHTML = passive02.toString()
         document.getElementById('passTotal1').innerText = price3.toString()
       
     }
 }
 update()
 function autoInterval(collectionInterval){
-    collectionInterval = setInterval(collectAutoUpgrades, 3000)
+    collectionInterval = setInterval(collectAutoUpgrades, 6000)
   }
   
     function collectAutoUpgrades(){

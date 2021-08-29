@@ -11,10 +11,11 @@
 
 .main-icon {
   cursor: crosshair;
+
   user-select: none;
   max-height: 75vh;
   max-width: 75vh;
-  transition: all .3s linear;
+
 }
 
 .energysword {
