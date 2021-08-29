@@ -150,7 +150,7 @@ function onClick(){
             upgrade1 += multiplier1 * total1}
             else     Swal.fire({
                 toast: true,
-                text: 'You broke!',
+                text: 'Not enough click faster!',
                 position: 'center',
                 timer: 4000,
                 timerProgressBar: true,
@@ -174,7 +174,7 @@ function onClick(){
     }
         else     Swal.fire({
             toast: true,
-            text: 'You broke!',
+            text: 'Not enough click faster broke!',
             position: 'center',
             timer: 4000,
             timerProgressBar: true,
@@ -197,7 +197,7 @@ function onClick(){
         passive02 += multiplier3 * total3  }
         else     Swal.fire({
             toast: true,
-            text: 'You broke!',
+            text: 'Not enough click faster',
             position: 'center',
             timer: 4000,
             timerProgressBar: true,
@@ -216,13 +216,11 @@ function autoInterval(collectionInterval){
   }
   
     function collectAutoUpgrades(){
-     let multitot = 0
-     let passtot = 0
-     multitot += multiplier2 + multiplier3
+    let multitot = 0
+    let passtot = 0
+    multitot += multiplier2 + multiplier3
     passtot += passive01  + passive02
     clicks += multitot * passtot
- 
-    
     console.log(clicks)
     document.getElementById('clickCount').innerText = clicks.toString()
     update()
@@ -237,18 +235,15 @@ function autoInterval(collectionInterval){
 
 
 
- function update(){
- document.getElementById("clickCount").innerText = clicks.toString()
- document.getElementById('multi').innerText = item1.toString()
- document.getElementById('multi1').innerText = item2.toString()
- document.getElementById("pass1").innerHTML = item3.toString()
- document.getElementById("pass2").innerHTML = item4.toString()
- 
- }
+function update(){
+document.getElementById("clickCount").innerText = clicks.toString()
+document.getElementById('multi').innerText = item1.toString()
+document.getElementById('multi1').innerText = item2.toString()
+document.getElementById("pass1").innerHTML = item3.toString()
+document.getElementById("pass2").innerHTML = item4.toString()
 
- autoInterval()
- startInterval()
- update()
+}
 
-     
-  
+autoInterval()
+startInterval()
+update()
