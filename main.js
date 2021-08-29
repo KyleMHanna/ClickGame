@@ -168,7 +168,7 @@ function onClick(){
         item3 += 1;
         clicks -=60;
         total2 += 1;
-        multiplier2 += 1.5;
+        multiplier2 += 3;
         price2 += 60
         passive01 += multiplier2 * total2  
     }
@@ -192,7 +192,7 @@ function onClick(){
         item4 += 1;
         clicks -=35;
         total3 += 1;
-        multiplier3 += 1.25;
+        multiplier3 += 2;
         price3 += 35
         passive02 += multiplier3 * total3  }
         else     Swal.fire({
