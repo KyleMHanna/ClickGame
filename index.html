@@ -6,6 +6,7 @@
   <title>Halo click game</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/styles/style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
 </head>
 
 <style>
@@ -28,7 +29,7 @@
 <header class="">
     
     <div class="container-md-12 !direction !spacing text-center pt-3">
-        <h1 class="text-light ">Grunt Miner</h1>
+        <h1 class="text-secondary "> Halo Click Trainer</h1>
     </div>
 </header>
 <!-- body -->
@@ -38,39 +39,47 @@
 <div class="container-fluid text-center py-4 ">
     <!-- Stats and inventory cards/ counters -->
     <div class="row">
-        <div class="col-md-4 py-5">
+        <div class="col-md-4 py-5 text-center">
                 <div class=" ">
                     <h1 class="text-light">Passives Bought</h1>
                     
-                    <p class="bg-danger text-light">Healthpack: </p><span class="text-light"id = "pass2"></span> </p>
-                    <p class="bg-primary text-light">Regen: <p><span class="text-light" id = "pass1"></span> </p>
+                    <p class="bg-danger text-light">Healthpack: </p> 
+                    <p><i class="mdi mdi-medical-bag mdi-48px text-danger mx-1 aria-hidden="true"> </i>
+                    <span class="text-danger"id = "pass2"></span>
+                  </p>
+                  
+                    <p class="bg-primary text-light">Regen:</p>  
+                     <p><i class="mdi mdi-ev-station mdi-48px text-success mx-1 aria-hidden="true"></i>
+                     <span class="text-danger" id = "pass1"></span>
+                    </p>
               </div>
         </div>
-        <div class="col-md-4" >
-            <div class=" main-icon" >
-            <button class="" onClick="onClick()"><img class="moonImg main-icon  "src="https://media4.giphy.com/media/iFU7R8rH4CiUUcHzk9/giphy.gif?cid=ecf05e47r1q9az449ld4rfpxyrow76w4kxf6b0tn0hb01eih&rid=giphy.gif&ct=g" alt=""></button>
-            <h2 class="text-light pt-4">Click on Master Chief to Start</h2>
-
-
-            <li class=" text-light "> <p class="bg-success"> Cash money</p>
-            <span class="text-danger">$</span>
-              <h3 class="text-danger" id="clickCount"> 0</h3>$</li> </li>
-
-
-        </div>
+        <div class="col-md-4  text-center" >
+        
+            <div class=" " >
+            <button class="" onClick="onClick()"><img class=" main-icon  "src="https://media4.giphy.com/media/iFU7R8rH4CiUUcHzk9/giphy.gif?cid=ecf05e47r1q9az449ld4rfpxyrow76w4kxf6b0tn0hb01eih&rid=giphy.gif&ct=g" alt=""></button>
+            <h2 class="text-light pt-4">Master Chief Needs Clicks to Survive </h2>
+          </div>
+          <li class=" text-light "> <p class="bg-success"> </p>
+         <i class="mdi mdi-microsoft-xbox mdi-48px text-success mx-1 aria-hidden="true"> </i>
+            <h3 class="text-success" id="clickCount"> 0</h3></li> </li>
     </div>
-        <div class="col-md-4 py-5 ">
-               
+        <div class="col-md-4 py-5  text-center">
+            
                   <h1 class="text-light">Inventory</h1>
                 
                 
-                  <p class="bg-secondary text-light">BattleRifle </p> 
-                  <span class="text-light">Power Level</span>
-                  <span class="text-light" id ="multi"> </span>
+                  <p class="bg-danger text-light">BattleRifle </p> 
+                  <span class="text-light">
+                    <i class="mdi mdi-bullseye-arrow mdi-48px text-success mx-1 aria-hidden="true"> </i>
+                  </span>
+                  <span class="text-danger" id ="multi"> </span>
 
-                  <p class="text-light"><p class="text-light bg-secondary">Sword</p> 
-                  <span class="text-light">Power Level</span>
-                  <span class="text-light" id ="multi1"></span>
+                  <p class="bg-success"><p class="text-light bg-primary">Sword</p> 
+                  <span class="text-light">
+                    <i class="mdi mdi-sword mdi-48px text-danger mx-1 aria-hidden="true"> </i>
+                  </span>
+                  <span class="text-danger" id ="multi1"></span>
                 </ul>
               </div>
         </div>
@@ -78,29 +87,44 @@
 </container-fluid>
 
 <div class="container fluid-md-12">
-  <p class = text-danger><span class id = "clickpass2">0</span> X Multi for weapons</p>
-  <p class = text-danger ><span class id = "clickpass1">0</span> X  Multi for passives</p>
+  <div class="row">
+    
+    <div class="col-md-6 text-center">
+      <h2 class="text-danger"> <i class="mdi mdi-plus-box -xbox mdi-48px text-success mx-1 aria-hidden="true"><span class id = "clickpass2">0</span> </i>X</h2>
+    </div>
+   
+    <div class="col-md-6 te">
+  <h2  class="text-danger"> <i class="mdi mdi-bottle-tonic-plus -xbox mdi-48px text-success mx-1 aria-hidden="true"><span class id = "clickpass1">0</span> </i>X</h2>
 
+  </div>
+</div>
 </div>
 <!-- upgrades and store -->
 <div class="container-fluid text-center">
     <div class="row">
-        <div class="col-md-6">
-            <h2 class="card bg-secondary"> Passives </h2>
-            <button onclick="passive1()" class="btn border shadow  text-white bg-danger">
+        <div class="col-md-6  text-center">
+            <h2 class="card bg-secondary  "> Passives </h2>
+            <button onclick="passive1()" class="btn main-icon ">
               <img class="BattleRifle" src="https://cdn.staticneo.com/w/halo/Overshield.jpg" alt=""></button>
-              <p class = text-light>  $<span class id = "passTotal">60</span>  </p>
-            <button onclick="passive2()" class="btn border shadow bg-danger text-white "> <img class="BattleRifle" src="https://www.icy-veins.com/forums/uploads/monthly_2016_07/577cff9d78116_OverwatchHealthPackIcyVeinsVampAurora.png.eb6f7ac1b6a1c7b92a40de0ca2329120.png" alt=""></button>
-            <p class = text-light> $<span class id = "passTotal1">35</span> </p>
+
+              <p class = text-light>  <span class id = "passTotal">60</span>  </p>
+
+            <button onclick="passive2()" class=" btn main-icon "> <img class="BattleRifle" src="https://www.icy-veins.com/forums/uploads/monthly_2016_07/577cff9d78116_OverwatchHealthPackIcyVeinsVampAurora.png.eb6f7ac1b6a1c7b92a40de0ca2329120.png" alt="">
+            </button>
+            <p class = text-light> <span class id = "passTotal1">35</span> </p>
           </div>
-          <div class="col-md-6">
+
+          <div class="col-md-6  text-center">
             <h2 class="card bg-secondary"> Upgrades </h2>
-              <button onclick="addItem1()" class="btn border shadow bg-dark text-white main-icon"> <img class="BattleRifle" src="https://pbs.twimg.com/media/DzNFf9DU0AMvqvB.jpg" alt=""> </button>
-              <p class = text-light>$<span class id = "clickItem1">50</span></p>
+
+              <button onclick="addItem1()" class="btn  main-icon"> <img class="BattleRifle" src="https://pbs.twimg.com/media/DzNFf9DU0AMvqvB.jpg" alt=""> </button>
+              <p class = text-light><span class id = "clickItem1">50</span></p>
               
-              <button onclick="addItem2()" class="btn border shadow bg-dark text-white bg-primary"> Energy sword 
-              <p> <img class="energysword" src= "https://static.turbosquid.com/Preview/001301/062/W1/_Z.jpg" alt=""></p>     </button>
-           <p class = text-light><span class id = "clickItem2">$30</span> </p>
+              <button onclick="addItem2()" class="btn  main-icon">  
+               <img class="energysword" src= "https://static.turbosquid.com/Preview/001301/062/W1/_Z.jpg" alt=""> 
+              </button>
+
+               <p class="text-light"><span class id = "clickItem2">30</span></p>
         </div>
     </div>
 </div>

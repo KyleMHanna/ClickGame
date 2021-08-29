@@ -60,16 +60,6 @@ let multiplier3 = 0
 //     }
 //   };
 
-  
-  
-        
-    
-  
-
-
-  
-
-
 //   function onClick(){
 //       clicks ++
 //       for (let key in clickUpgrades){
@@ -112,7 +102,7 @@ function onClick(){
     //         // timer: 4000,
     //         // timerProgressBar: true,
     //         // imageUrl: 'https://i.ytimg.com/vi/_NQ3mWcbiBA/maxresdefault.jpg'
-          
+  
         function addItem1(){
             if(clicks >= 50) {
                 item1 += 1;
@@ -132,7 +122,7 @@ function onClick(){
                 });
                 else   Swal.fire({
                     toast: true,
-                    text: 'You broke!',
+                    text: 'Not enough click faster!',
                     position: 'center',
                     timer: 4000,
                     timerProgressBar: true,
