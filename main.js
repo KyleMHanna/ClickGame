@@ -222,7 +222,7 @@ function autoInterval(collectionInterval){
     passtot += passive01  + passive02
     clicks += multitot * passtot
     console.log(clicks)
-    document.getElementById('clickCount').innerText = clicks.toString()
+   
     update()
     }
 
