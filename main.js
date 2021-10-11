@@ -220,7 +220,7 @@ function autoInterval(collectionInterval){
     let passtot = 0
     multitot += multiplier2 + multiplier3
     passtot += passive01  + passive02
-    clicks += multitot * passtot
+    clicks += multitot + passtot
     console.log(clicks)
    
     update()
